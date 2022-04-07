@@ -49,7 +49,7 @@ const HotspotSetupBluetoothError = () => {
           </Box>
           <Box
             flex={1}
-            backgroundColor="secondary"
+            backgroundColor="secondaryBackground"
             borderTopRightRadius="m"
             borderBottomRightRadius="m"
             alignItems="center"

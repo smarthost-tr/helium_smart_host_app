@@ -144,7 +144,7 @@ const App = () => {
   )
 
   return (
-    <OnboardingProvider baseUrl="https://helium-onboarding.nebra.com/api/v2">
+    <OnboardingProvider baseUrl="https://helium-onboarding.smarthost.com.tr/api/v2">
       <HotspotBleProvider>
         <ThemeProvider theme={colorAdaptedTheme}>
           <BottomSheetModalProvider>

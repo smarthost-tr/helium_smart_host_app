@@ -1,7 +1,8 @@
 const getLocales = () => [
   // you can choose / add the locales you want
   { countryCode: 'US', languageTag: 'en-US', languageCode: 'en', isRTL: false },
-  { countryCode: 'FR', languageTag: 'fr-FR', languageCode: 'fr', isRTL: false },
+  { countryCode: 'TR', languageTag: 'tr-TR', languageCode: 'tr', isRTL: false },
+  { countryCode: 'AR', languageTag: 'ar-AE', languageCode: 'ar', isRTL: true },
 ]
 
 // use a provided translation, or return undefined to test your fallback

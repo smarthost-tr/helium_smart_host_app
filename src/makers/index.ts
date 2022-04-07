@@ -1,19 +1,19 @@
-import nebra from './nebra'
+import smart from './smarthost'
 import customAntennas from './custom/antennas'
 import { LangType, supportedLangs } from '../utils/i18n/i18nTypes'
 import { HotspotMakerLangField } from './hotspotMakerTypes'
 
 export const Makers: Record<string, { id: number; supportEmail: string }> = {
-  nebra,
+  smart,
 }
 
 export const AntennaModels = {
-  ...nebra.antennas,
+  ...smart.antennas,
   ...customAntennas,
 }
 
 export const HotspotMakerModels = {
-  ...nebra.hotspots,
+  ...smart.hotspots,
 }
 
 export type HotspotType = keyof typeof HotspotMakerModels
@@ -32,9 +32,8 @@ type MakerLangType = Record<
 export const getTranslations = () => {
   const trans: Record<LangType, MakerLangType> = {
     en: {} as MakerLangType,
-    ko: {} as MakerLangType,
-    zh: {} as MakerLangType,
-    ja: {} as MakerLangType,
+    tr: {} as MakerLangType,
+    ar: {} as MakerLangType,
   }
 
   supportedLangs.forEach((l) => {
@@ -53,5 +52,5 @@ export const AntennaTypeCount = AntennaModelKeys.length
 
 export const getMakerSupportEmail = (makerId?: number): string => {
   const makerKey = Object.keys(Makers).find((m) => Makers[m].id === makerId)
-  return makerKey ? Makers[makerKey].supportEmail : 'support@nebra.com'
+  return makerKey ? Makers[makerKey].supportEmail : 'support@smarthost.com.tr'
 }

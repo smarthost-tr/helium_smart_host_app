@@ -3,9 +3,8 @@ import { initReactI18next } from 'react-i18next'
 import * as RNLocalize from 'react-native-localize'
 import { useCallback, useEffect, useState } from 'react'
 import en from '../../locales/en'
-import ko from '../../locales/ko'
-import ja from '../../locales/ja'
-import zh from '../../locales/zh'
+import ar from '../../locales/ar'
+import tr from '../../locales/tr'
 import { getSecureItem, setSecureItem } from '../secureAccount'
 import { getTranslations } from '../../makers'
 
@@ -28,10 +27,9 @@ const hotspotMakerTranslations = getTranslations()
 
 i18n.use(initReactI18next).init({
   resources: {
-    ko: { translation: { ...ko, makerHotspot: hotspotMakerTranslations.ko } },
+    tr: { translation: { ...tr, makerHotspot: hotspotMakerTranslations.tr } },
+    ar: { translation: { ...ar, makerHotspot: hotspotMakerTranslations.ar } },
     en: { translation: { ...en, makerHotspot: hotspotMakerTranslations.en } },
-    zh: { translation: { ...zh, makerHotspot: hotspotMakerTranslations.zh } },
-    ja: { translation: { ...ja, makerHotspot: hotspotMakerTranslations.ko } },
   },
   lng: phoneLang,
   fallbackLng: ['en'],

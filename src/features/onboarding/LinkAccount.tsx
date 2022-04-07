@@ -19,8 +19,8 @@ const LinkAccount = () => {
         const url = WalletLink.createWalletLinkUrl({
           universalLink: app.urlScheme,
           requestAppId: getBundleId(),
-          callbackUrl: 'makerappscheme://',
-          appName: 'Nebra Hotspot',
+          callbackUrl: 'smarthostscheme://',
+          appName: 'SmartHost',
         })
 
         // Check if the wallet URL scheme can be opened.

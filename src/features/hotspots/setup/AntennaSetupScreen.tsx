@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native'
-import { getCountry } from 'react-native-localize'
+// import { getCountry } from 'react-native-localize'
 import { KeyboardAvoidingView, StyleSheet } from 'react-native'
 import Box from '../../../components/Box'
 import {
@@ -13,9 +13,9 @@ import Text from '../../../components/Text'
 import { DebouncedButton } from '../../../components/Button'
 import HotspotConfigurationPicker from '../../../components/HotspotConfigurationPicker'
 import { MakerAntenna } from '../../../makers/antennaMakerTypes'
-import nebra from '../../../makers/nebra'
+import smart from '../../../makers/smarthost'
 import { RootNavigationProp } from '../../../navigation/main/tabTypes'
-import { isCN, isEU, isUS } from '../../../utils/countries'
+// import { isCN, isEU, isUS } from '../../../utils/countries'
 
 type Route = RouteProp<HotspotSetupStackParamList, 'AntennaSetupScreen'>
 
@@ -28,13 +28,13 @@ const AntennaSetupScreen = () => {
   const handleClose = useCallback(() => rootNav.navigate('MainTabs'), [rootNav])
 
   const defaultAntenna = useMemo(() => {
-    const country = getCountry()
+    // const country = getCountry()
 
-    if (isUS(country)) return nebra.antennas.NEBRA_STOCK_US
-    if (isEU(country)) return nebra.antennas.NEBRA_STOCK_EU
-    if (isCN(country)) return nebra.antennas.NEBRA_STOCK_CN
+    // if (isUS(country)) return nebra.antennas.SMART_NORMAL
+    // if (isEU(country)) return nebra.antennas.SMART_EXTERNAL_10
+    // if (isCN(country)) return nebra.antennas.SMART_EXTERNAL_14
 
-    return nebra.antennas.NEBRA_STOCK_US
+    return smart.antennas.SMART_NORMAL
   }, [])
 
   const [antenna, setAntenna] = useState<MakerAntenna>(defaultAntenna)

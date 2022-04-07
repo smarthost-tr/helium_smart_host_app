@@ -174,7 +174,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.nebra.helium.maker"
+        applicationId "com.smarthost.helium.maker"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode getVersionCode()
